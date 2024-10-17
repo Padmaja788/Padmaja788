@@ -1,0 +1,28 @@
+#include<stdio.h>
+void arr(int m[],int n[])
+{
+    int si=sizeof(m)/sizeof(m[0]),sum=0;
+    for(int i=0;i<si;i++)
+    {
+        sum+=(m[i]+n[i]);
+    }
+    
+    printf("the sum is %d",sum);
+}
+void main()
+{
+    int m[10],n[10],i,no;
+    printf("enter no values ");
+    scanf("%d",&no);
+    printf("enter values of first array");
+    for(i=0;i<no;i++)
+    {
+        scanf("%d",&m[i]);
+    }
+    printf("enter values of second array");
+    for(i=0;i<no;i++)
+    {
+        scanf("%d",&n[i]);
+    }
+    arr(m,n);
+}
