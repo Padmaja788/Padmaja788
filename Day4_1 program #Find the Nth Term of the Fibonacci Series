@@ -1,0 +1,27 @@
+import java.util.*;
+class Main
+{
+    public static  void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int a=0,b=1,temp;
+        int num=sc.nextInt();
+        if(num==1)
+        {
+        System.out.printf("fib(%d)",a);
+        return;
+        }
+        if(num==2)
+        {
+        System.out.printf("fib(%d)",b);
+        return;
+        }
+        for(int i=3;i<=num;i++)
+        {
+            temp=a+b;
+            a=b;
+            b=temp;
+        }
+        System.out.printf("fib(%d)",b);
+    }
+}
