@@ -1,0 +1,23 @@
+#sum of factorial of individual digit is equal to that num ex:145=1!+4!+5!
+import java.util.*;
+class Main
+{
+public static void main (String[] args)
+{
+    Scanner sc =new Scanner(System.in);
+    int num=sc.nextInt();
+    int temp=num,sum=0;
+    while(num>0)
+    {
+        int rem=num%10;
+        int fact=1;
+        for(int i=rem;i>1;i--)
+        {
+            fact*=i;
+        }
+        sum+=fact;
+        num/=10;
+    }
+    System.out.printf(sum==temp?"%d is strong number":"%d is not strong number",temp);
+}
+}
