@@ -1,0 +1,18 @@
+#376 square is 141376 here last digits of square is equal to num
+import java.util.*;
+class Main
+{
+public static void main (String[] args)
+{
+    Scanner sc =new Scanner(System.in);
+    int num=sc.nextInt(),sq=num*num,temp=num;
+    while(num>0)
+    {
+        if(num%10!=sq%10)
+        break;
+        num/=10;
+        sq/=10;
+    }
+    System.out.printf(num==0?"%d is Automorphic":"%d is not Automorphic",temp);
+}
+}
