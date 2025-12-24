@@ -1,0 +1,17 @@
+# Num is completely divisible by sum of individual digits ex:num 21 (2+1) 21%3=0
+import java.util.*;
+class Main
+{
+public static void main (String[] args)
+{
+    Scanner sc =new Scanner(System.in);
+    int num=sc.nextInt(),temp=num,sum=0;
+    while(num>0)
+    {
+        int rem=num%10;
+        sum+=rem;
+        num/=10;
+    }
+    System.out.printf(temp%sum==0?"%d is Harshad number":"%d is not Harshad number",temp);
+}
+}
