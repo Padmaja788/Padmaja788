@@ -1,0 +1,16 @@
+#sum of factors of a number is equal to given number ex:6=1+2+3 
+import java.util.*;
+class Main
+{
+public static void main (String[] args)
+{
+    Scanner sc =new Scanner(System.in);
+    int num=sc.nextInt(),sum=0;
+    for(int i=1;i<=num/2;i++)
+    {
+        if(num%i==0)
+        sum+=i;
+    }
+     System.out.printf(sum==num?"%d is perfect number":"%d is not perfect number",num);
+}
+}
