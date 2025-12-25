@@ -1,0 +1,16 @@
+# if sum of factors of that num is greater than that number ex:12 1+2+3+4+6=16 16>12 is abundant num
+import java.util.*;
+class Main
+{
+	public static void main (String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt(),sum=1;
+		for(int i=2; i<=num/2; i++)
+		{
+			if(num%i==0)
+				sum+=i;
+		}
+		System.out.printf(sum>num?"%d is abundant number":"%d is not abundant number",num);
+	}
+}
