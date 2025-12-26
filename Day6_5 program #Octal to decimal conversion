@@ -1,0 +1,15 @@
+import java.util.*;
+class Main
+{ 
+    public static void main(String []args) 
+    { 
+        Scanner sc =new Scanner(System.in);
+        int num=sc.nextInt(),sum=0,n=0;
+        while(num>0) 
+        { 
+            int rem=num%10;
+            sum+=rem<<(3*n);
+            num/=10; n+=1;
+            }
+            System.out.print(sum); 
+    } }
