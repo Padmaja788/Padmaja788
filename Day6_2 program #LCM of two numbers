@@ -1,0 +1,20 @@
+import java.util.*;
+class Main 
+{
+    public static void main(String []args)
+    {
+        Scanner sc =new Scanner(System.in);
+        int num1=sc.nextInt();
+        int num2=sc.nextInt();
+        int lcm=0,temp=num1>num2?num2:num1,i=1;
+        while(1)
+        {
+            if((i*temp)%num1==0 && (i*temp)%num2==0)
+            {
+                System.out.print(i*temp);
+                break;
+            }
+            i++;
+        }
+    }
+}
